@@ -40,6 +40,7 @@
 <button></button>
 <script>
   const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button');
 
   function logText(e) {
     console.log(this.classList.value);
@@ -50,6 +51,12 @@
     capture: false,
     once: true
   }));
+
+  button.addEventListener('click', () => {
+    console.log('CLICK');
+  }, {
+    once: true
+  });
 </script>
 </body>
 </html>
